@@ -1,19 +1,20 @@
 import React from "react";
 import { Grid } from "@mui/material";
+import "../_css/homepage.css"
 
 export default function Welcome() {
   return (
-    <div
-      className="min-h-screen w-full bg-gray-200"
-      // To add a backdrop
-      // style={{
-      //   backgroundImage: `url(${vegasImage.src})`,
-      //   backgroundRepeat: "no-repeat",
-      //   backgroundSize: "cover",
-      // }}
+    <Grid
+      container
+      spacing={0}
+      justifyContent={"center"}
+      alignItems={"center"}
+      className="min-h-screen w-full bg-slate-900"
     >
       <Grid
+        item
         container
+        xs={12}
         spacing={0}
         direction="column"
         alignItems="center"
@@ -31,6 +32,28 @@ export default function Welcome() {
           </div>
         </Grid>
       </Grid>
-    </div>
+      <Grid
+        item
+        container
+        xs={8}
+        alignItems="center"
+        justifyContent={"center"}
+        textAlign={"center"}
+      >
+        <Grid
+          item
+          className="rounded-t-full bg-white shadow-inner"
+          sx={{
+            marginTop: "-20vh",
+            height: "20vh",
+          }}
+          xs={12}
+        >
+          <h2>
+            Meet The Team
+          </h2>
+        </Grid>
+      </Grid>
+    </Grid>
   );
 }
