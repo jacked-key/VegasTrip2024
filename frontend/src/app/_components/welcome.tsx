@@ -1,19 +1,20 @@
-'use client'
+"use client";
 import React, { useEffect, useState } from "react";
 import { Grid } from "@mui/material";
-import "../_css/homepage.css"
+import "../_css/homepage.css";
 import LedSign from "./meetTheTeam/ledSign/ledSign";
 
 const PROPERTIES = {
   initial_animation_duration_ms: 4000,
-}
+};
 
 export interface WelcomeProps {
   setLoaded: (loaded: boolean) => void;
 }
 
 export default function Welcome(props: WelcomeProps) {
-  const [firstAnimationLoaded, setFirstAnimationLoaded] = useState<boolean>(false);
+  const [firstAnimationLoaded, setFirstAnimationLoaded] =
+    useState<boolean>(false);
 
   useEffect(() => {
     setFirstAnimationLoaded(false);
@@ -43,14 +44,13 @@ export default function Welcome(props: WelcomeProps) {
         sx={{ minHeight: "100vh" }}
       >
         <Grid item xs={3}>
-          <LedSign word="What happens in Vegas"/>
+          <LedSign word="What happens in Vegas" />
         </Grid>
         <Grid item xs={3}>
-          <LedSign word="Stays in Vegas"/>
+          <LedSign word="Stays in Vegas" />
         </Grid>
       </Grid>
-      {
-        firstAnimationLoaded &&
+      {firstAnimationLoaded && (
         <Grid
           item
           container
@@ -68,12 +68,10 @@ export default function Welcome(props: WelcomeProps) {
             }}
             xs={12}
           >
-            <h2>
-              Meet The Team
-            </h2>
+            <h2>Meet The Team</h2>
           </Grid>
         </Grid>
-      }
+      )}
     </Grid>
   );
 }

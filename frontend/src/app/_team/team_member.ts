@@ -1,4 +1,4 @@
-import { TeamMember } from "../_components/meetTheTeam/meetTheTeam"
+import { TeamMember } from "../_components/meetTheTeam/meetTheTeam";
 
 export const teamMembers: TeamMember[] = [
   {
@@ -43,4 +43,4 @@ export const teamMembers: TeamMember[] = [
     most_excited: "excited for vegas thing",
     throw_up: "yes",
   },
-]
+];

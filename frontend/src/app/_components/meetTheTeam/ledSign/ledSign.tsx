@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import LedLetter from "./ledLetter";
 
 export interface LedSignProps {
@@ -8,11 +8,9 @@ export interface LedSignProps {
 export default function LedSign(props: LedSignProps) {
   return (
     <div>
-      {
-        props.word.split('').map((letter, index) => (
-          <LedLetter letter={letter}/>
-        ))
-      }
+      {props.word.split("").map((letter, index) => (
+        <LedLetter letter={letter} />
+      ))}
     </div>
-  ) 
-} 
+  );
+}

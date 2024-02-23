@@ -3,7 +3,7 @@ import React from "react";
 import BioCard, { BioCardProps } from "./bioCard";
 import InformationCard, { InformationCardProps } from "./informationCard";
 
-export interface TeamMember extends BioCardProps, InformationCardProps{
+export interface TeamMember extends BioCardProps, InformationCardProps {
   name: string;
   who_are_you: string;
   fun_fact: string;
@@ -16,7 +16,13 @@ export interface MeetTheTeamProps {
 
 export default function MeetTheTeam(props: MeetTheTeamProps) {
   return (
-    <Grid container className="bg-slate-900" spacing={0} justifyContent={"center"} alignItems={"center"}>
+    <Grid
+      container
+      className="bg-slate-900"
+      spacing={0}
+      justifyContent={"center"}
+      alignItems={"center"}
+    >
       <Grid container item xs={8} className="bg-white">
         <Grid item xs={12}>
           <Stack
@@ -24,11 +30,11 @@ export default function MeetTheTeam(props: MeetTheTeamProps) {
             spacing={2}
             alignItems={"center"}
             justifyContent={"center"}
-            divider={<Divider orientation="horizontal" flexItem/>}
+            divider={<Divider orientation="horizontal" flexItem />}
           >
-            {props.teamMembers.map((teamMember, idx) => (
-              render_individual(teamMember, idx)
-            ))}
+            {props.teamMembers.map((teamMember, idx) =>
+              render_individual(teamMember, idx),
+            )}
           </Stack>
         </Grid>
       </Grid>
@@ -38,15 +44,9 @@ export default function MeetTheTeam(props: MeetTheTeamProps) {
 
 function render_individual(teamMember: TeamMember, idx: number) {
   return (
-    <Grid
-      container
-      spacing={2}
-    >
+    <Grid container spacing={2}>
       <Grid container item xs={6} direction="column" alignItems={"center"}>
-        <BioCard
-          name={teamMember.name}
-          who_are_you={teamMember.who_are_you}
-        />
+        <BioCard name={teamMember.name} who_are_you={teamMember.who_are_you} />
       </Grid>
       <Grid container item xs={6} direction="column" alignItems={"center"}>
         <InformationCard
