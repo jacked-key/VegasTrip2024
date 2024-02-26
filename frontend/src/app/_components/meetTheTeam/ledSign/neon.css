@@ -1,0 +1,12 @@
+:root {
+  /* Base font size */
+  font-size: 10px;
+
+  /* Set neon color */
+  --neon-text-color: #ffdfdf;
+  --neon-text-shadow: #f40;
+  --neon-text-edge-color: rgb(236, 136, 100);
+  --neon-border-color: #08f;
+  --neon-border-shadow: #08f;
+  --neon-border-edge-color: #08f;
+}

@@ -44,10 +44,10 @@ export default function Welcome(props: WelcomeProps) {
         sx={{ minHeight: "100vh" }}
       >
         <Grid item xs={3}>
-          <LedSign word="What happens in Vegas" />
+          <LedSign word="What happens in Vegas" general_delay_char={0} />
         </Grid>
         <Grid item xs={3}>
-          <LedSign word="Stays in Vegas" />
+          <LedSign word="Stays in Vegas" general_delay_char={21} />
         </Grid>
       </Grid>
       {firstAnimationLoaded && (

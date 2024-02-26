@@ -44,7 +44,7 @@ export default function MeetTheTeam(props: MeetTheTeamProps) {
 
 function render_individual(teamMember: TeamMember, idx: number) {
   return (
-    <Grid container spacing={2}>
+    <Grid container spacing={2} key={idx}>
       <Grid container item xs={6} direction="column" alignItems={"center"}>
         <BioCard name={teamMember.name} who_are_you={teamMember.who_are_you} />
       </Grid>
