@@ -1,5 +1,5 @@
-import React from "react";
-import LedLetter from "./ledLetter";
+import React from 'react';
+import LedLetter from './ledLetter';
 
 export interface LedSignProps {
   word: string;
@@ -9,7 +9,7 @@ export interface LedSignProps {
 export default function LedSign(props: LedSignProps) {
   return (
     <div>
-      {props.word.split("").map((letter, index) => (
+      {props.word.split('').map((letter, index) => (
         <LedLetter
           letter={letter}
           key={index}

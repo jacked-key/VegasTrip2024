@@ -1,6 +1,6 @@
-import { keyframes, styled } from "@mui/material";
-import React from "react";
-import "./neon.css";
+import { keyframes, styled } from '@mui/material';
+import React from 'react';
+import './neon.css';
 
 export interface LedLetterProps {
   letter: string;
@@ -31,14 +31,14 @@ const turn_on_animation = keyframes`
   }
 `
 
-const FlickeringLights = styled("span")<{flickeringProps: {
+const FlickeringLights = styled('span')<{flickeringProps: {
   duration: string,
   startTime: string,
 }}>(({ flickeringProps }) => ({
-  fontSize: "5rem",
+  fontSize: '5rem',
   fontWeight: 700,
-  color: "var(--neon-text-color)",
-  textTransform: "uppercase",
+  color: 'var(--neon-text-color)',
+  textTransform: 'uppercase',
   textShadow:
     `-0.2rem -0.2rem 1rem var(--neon-text-shadow),
      0.2rem 0.2rem 1rem var(--neon-text-shadow),

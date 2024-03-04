@@ -1,8 +1,8 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import { Grid } from "@mui/material";
-import "../_css/homepage.css";
-import LedSign from "./meetTheTeam/ledSign/ledSign";
+'use client';
+import React, { useEffect, useState } from 'react';
+import { Grid } from '@mui/material';
+import '../_css/homepage.css';
+import LedSign from './meetTheTeam/ledSign/ledSign';
 
 const PROPERTIES = {
   initial_animation_duration_ms: 4000,
@@ -29,9 +29,12 @@ export default function Welcome(props: WelcomeProps) {
     <Grid
       container
       spacing={0}
-      justifyContent={"center"}
-      alignItems={"center"}
-      className="min-h-screen w-full bg-slate-900"
+      justifyContent={'center'}
+      alignItems={'center'}
+      className="min-h-screen w-full"
+      style={{
+        animation: `brighten ${PROPERTIES.initial_animation_duration_ms+1000}ms cubic-bezier(.95,.05,.8,.04)`
+      }}
     >
       <Grid
         item
@@ -41,7 +44,7 @@ export default function Welcome(props: WelcomeProps) {
         direction="column"
         alignItems="center"
         justifyContent="center"
-        sx={{ minHeight: "100vh" }}
+        sx={{ minHeight: '100vh' }}
       >
         <Grid item xs={3}>
           <LedSign word="What happens in Vegas" general_delay_char={0} />
@@ -56,15 +59,15 @@ export default function Welcome(props: WelcomeProps) {
           container
           xs={8}
           alignItems="center"
-          justifyContent={"center"}
-          textAlign={"center"}
+          justifyContent={'center'}
+          textAlign={'center'}
         >
           <Grid
             item
             className="rounded-t-full bg-white shadow-inner"
             sx={{
-              marginTop: "-8rem",
-              height: "8rem",
+              marginTop: '-8rem',
+              height: '8rem',
             }}
             xs={12}
           >

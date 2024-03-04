@@ -1,10 +1,10 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
 
 export const metadata: Metadata = {
-  title: "Vegas Valozoo",
-  description: "Rattie",
+  title: 'Vegas Valozoo',
+  description: 'Rattie',
 };
 
 export default function RootLayout({
