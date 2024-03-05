@@ -18,6 +18,7 @@ export default function Home() {
           backgroundRepeat: 'no-repeat',
           backgroundSize: '100% 100%',
           width: '100%',
+          height: '100%',
         }}
       >
         <Welcome setLoaded={setMeetTheTeam} />
