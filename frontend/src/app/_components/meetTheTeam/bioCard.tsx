@@ -16,6 +16,9 @@ export default function BioCard(props: BioCardProps) {
     >
       <CardMedia
         sx={{
+          top: '0px',
+          right: '0px',
+          objectFit: "contain",
           height: '120px',
           '@media (min-width:600px)': { // Breakpoint at 600px width and above
             height: '120px', // Adjust height for larger screens
@@ -30,7 +33,7 @@ export default function BioCard(props: BioCardProps) {
             height: '240px', // Adjust height for even larger screens
           },
         }}
-        image={require('../../_team/LebronJames.jpeg').default.src}
+        image={require(`../../_team/${props.name}.jpeg`).default.src}
         title={props.name}
       />
       <CardContent>
