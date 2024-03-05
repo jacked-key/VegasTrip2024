@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { Grid } from '@mui/material';
 import '../_css/homepage.css';
 import LedSign from './meetTheTeam/ledSign/ledSign';
+import { useTheme } from '@emotion/react';
+import Typography from '@mui/material/Typography';
 
 const PROPERTIES = {
   initial_animation_duration_ms: 4000,
@@ -25,6 +27,8 @@ export default function Welcome(props: WelcomeProps) {
     return () => clearTimeout(timeOut);
   }, []);
 
+  const theme = useTheme();
+
   return (
     <Grid
       container
@@ -33,7 +37,9 @@ export default function Welcome(props: WelcomeProps) {
       alignItems={'center'}
       className="min-h-screen w-full"
       style={{
-        animation: `brighten ${PROPERTIES.initial_animation_duration_ms+1000}ms cubic-bezier(.95,.05,.8,.04)`
+        animation: `brighten ${PROPERTIES.initial_animation_duration_ms+1000}ms cubic-bezier(.95,.05,.8,.04)`,
+        WebkitAnimation: `brighten ${PROPERTIES.initial_animation_duration_ms+1000}ms cubic-bezier(.95,.05,.8,.04)`,
+        MozAnimation: `brighten ${PROPERTIES.initial_animation_duration_ms+1000}ms cubic-bezier(.95,.05,.8,.04)`,
       }}
     >
       <Grid
@@ -57,7 +63,11 @@ export default function Welcome(props: WelcomeProps) {
         <Grid
           item
           container
-          xs={8}
+          xs={12}
+          sm={12}
+          md={10}
+          lg={8}
+          xl={8}
           alignItems="center"
           justifyContent={'center'}
           textAlign={'center'}
@@ -65,13 +75,48 @@ export default function Welcome(props: WelcomeProps) {
           <Grid
             item
             className="rounded-t-full bg-white shadow-inner"
-            sx={{
-              marginTop: '-8rem',
-              height: '8rem',
-            }}
             xs={12}
+            sx={{
+              marginTop: '-4rem',
+              height: '4rem',
+              '@media (min-width:600px)': { // Breakpoint at 600px width and above
+                marginTop: '-4rem', // Adjust margin for larger screens
+                height: '4rem', // Adjust height for larger screens
+              },
+              '@media (min-width:960px)': { // Breakpoint at 960px width and above
+                marginTop: '-8rem', // Adjust margin for even larger screens
+                height: '8rem', // Adjust height for even larger screens
+              },
+              '@media (min-width:1280px)': { // Breakpoint at 960px width and above
+                marginTop: '-8rem', // Adjust margin for even larger screens
+                height: '8rem', // Adjust height for even larger screens
+              },
+              '@media (min-width:1920px)': { // Breakpoint at 960px width and above
+                marginTop: '-8rem', // Adjust margin for even larger screens
+                height: '8rem', // Adjust height for even larger screens
+              },
+            }}
           >
-            <h2>Meet The Team</h2>
+            <Typography
+              variant="h2"
+              sx={{
+                fontSize: '2rem',
+                '@media (min-width:600px)': { // Breakpoint at 600px width and above
+                  fontSize: '2rem',
+                },
+                '@media (min-width:960px)': { // Breakpoint at 960px width and above
+                  fontSize: '4rem',
+                },
+                '@media (min-width:1280px)': { // Breakpoint at 960px width and above
+                  fontSize: '4rem',
+                },
+                '@media (min-width:1920px)': { // Breakpoint at 960px width and above
+                  fontSize: '6rem',
+                },
+              }}
+            >
+              Meet The Team
+            </Typography>
           </Grid>
         </Grid>
       )}

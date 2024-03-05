@@ -23,7 +23,16 @@ export default function MeetTheTeam(props: MeetTheTeamProps) {
       justifyContent={'center'}
       alignItems={'center'}
     >
-      <Grid container item xs={8} className="bg-white">
+      <Grid
+        container
+        item
+        xs={12}
+        sm={12}
+        md={10}
+        lg={8}
+        xl={8}
+        className="bg-white"
+      >
         <Grid item xs={12}>
           <Stack
             direction="column"

@@ -17,7 +17,7 @@ export default function InformationCard(props: InformationCardProps) {
   return (
     <Card
       sx={{
-        width: '80%',
+        width: '90%',
         height: '100%',
       }}
     >

@@ -1,4 +1,4 @@
-import { keyframes, styled } from '@mui/material';
+import { keyframes, styled, useTheme } from '@mui/material';
 import React from 'react';
 import './neon.css';
 
@@ -34,25 +34,41 @@ const turn_on_animation = keyframes`
 const FlickeringLights = styled('span')<{flickeringProps: {
   duration: string,
   startTime: string,
-}}>(({ flickeringProps }) => ({
-  fontSize: '5rem',
-  fontWeight: 700,
-  color: 'var(--neon-text-color)',
-  textTransform: 'uppercase',
-  textShadow:
-    `-0.2rem -0.2rem 1rem var(--neon-text-shadow),
-     0.2rem 0.2rem 1rem var(--neon-text-shadow),
-     0 0 2rem var(--neon-text-shadow);`,
-  // animation: `${flicker} 1s linear`,
-  // WebkitAnimation: `${flicker} 1s linear`,
-  // MozAnimation: `${flicker} 1s linear`,
-  // OAnimation: `${flicker} 1s linear`,
-  animation: `${turn_on_animation} ${flickeringProps.duration} ${flickeringProps.startTime} linear 1 forwards`,
-  WebkitAnimation: `${turn_on_animation} ${flickeringProps.duration} ${flickeringProps.startTime} linear 1 forwards`,
-  MozAnimation: `${turn_on_animation} ${flickeringProps.duration} ${flickeringProps.startTime} linear 1 forwards`,
-  OAnimation: `${turn_on_animation} ${flickeringProps.duration} ${flickeringProps.startTime} linear 1 fowards`,
-  opacity: 0.3,
-}));
+}}>(({ flickeringProps }) => {
+  const theme = useTheme();
+  
+  return {
+    fontSize: '2rem',
+    fontWeight: 700,
+    color: 'var(--neon-text-color)',
+    textTransform: 'uppercase',
+    textShadow:
+      `-0.2rem -0.2rem 1rem var(--neon-text-shadow),
+      0.2rem 0.2rem 1rem var(--neon-text-shadow),
+      0 0 2rem var(--neon-text-shadow);`,
+    // animation: `${flicker} 1s linear`,
+    // WebkitAnimation: `${flicker} 1s linear`,
+    // MozAnimation: `${flicker} 1s linear`,
+    // OAnimation: `${flicker} 1s linear`,
+    animation: `${turn_on_animation} ${flickeringProps.duration} ${flickeringProps.startTime} linear 1 forwards`,
+    WebkitAnimation: `${turn_on_animation} ${flickeringProps.duration} ${flickeringProps.startTime} linear 1 forwards`,
+    MozAnimation: `${turn_on_animation} ${flickeringProps.duration} ${flickeringProps.startTime} linear 1 forwards`,
+    OAnimation: `${turn_on_animation} ${flickeringProps.duration} ${flickeringProps.startTime} linear 1 fowards`,
+    opacity: 0.3,
+    [theme.breakpoints.up('sm')]: {
+      fontSize: '3rem',
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '4rem',
+    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: '4rem',
+    },
+    [theme.breakpoints.up('xl')]: {
+      fontSize: '5rem',
+    },
+  }
+});
 
 export default function LedLetter(props: LedLetterProps) {
   const speed_randomness = Math.floor(Math.random() * props.speed_variance_ms);
