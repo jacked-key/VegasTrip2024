@@ -15,7 +15,7 @@ export default function Home() {
         style={{
           backgroundImage: `url(${backgroundImage.src})`,
           backgroundAttachment: 'fixed',
-          backgroundRepeat: 'no-repeat',
+          backgroundRepeat: 'repeat-y',
           backgroundSize: '100% 100%',
           width: '100%',
           height: '100%',
