@@ -17,8 +17,8 @@ export default function Home() {
           backgroundAttachment: 'fixed',
           backgroundRepeat: 'repeat-y',
           backgroundSize: '100% 100%',
-          width: '100%',
-          height: '100%',
+          width: '100vw',
+          height: '100vh',
         }}
       >
         <Welcome setLoaded={setMeetTheTeam} />
