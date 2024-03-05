@@ -23,7 +23,7 @@ const flicker = keyframes`
 const turn_on_animation = keyframes`
   19.999%, 22%, 62.999%, 64%, 64.999%, 70%, to {
     opacity: .99;
-    text-shadow: 0 0 1rem #fff, 0 0 2rem var(--neon-text-shadow);
+    text-shadow: 0 0 4 #fff, 0 0 8 var(--neon-text-shadow);
   }
   0%, 21.999%, 63%, 63.999%, 65%, 69.999% {
     opacity: 0.4;
