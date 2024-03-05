@@ -37,6 +37,7 @@ export default function Welcome(props: WelcomeProps) {
       alignItems={'center'}
       className="min-h-screen w-full"
       style={{
+        position: 'relative',
         animation: `brighten ${PROPERTIES.initial_animation_duration_ms+1000}ms cubic-bezier(.95,.05,.8,.04)`,
         WebkitAnimation: `brighten ${PROPERTIES.initial_animation_duration_ms+1000}ms cubic-bezier(.95,.05,.8,.04)`,
         MozAnimation: `brighten ${PROPERTIES.initial_animation_duration_ms+1000}ms cubic-bezier(.95,.05,.8,.04)`,

@@ -3,7 +3,7 @@ import React from 'react';
 import Welcome from './_components/welcome';
 import MeetTheTeam from './_components/meetTheTeam/meetTheTeam';
 import { teamMembers } from './_team/team_member';
-import backgroundImage from './_components/background.jpg'
+import backgroundImage from './_components/background.jpg';
 
 
 export default function Home() {
@@ -11,19 +11,30 @@ export default function Home() {
 
   return (
     <main>
-      <div
+      {/* <div
         style={{
           backgroundImage: `url(${backgroundImage.src})`,
           backgroundAttachment: 'fixed',
-          backgroundRepeat: 'repeat-y',
+          backgroundRepeat: 'no-repeat',
           backgroundSize: '100% 100%',
-          width: '100vw',
-          height: '100vh',
+          width: '100%',
+          height: '100%',
         }}
-      >
+      > */}
+        <div
+          style={{
+            backgroundImage: `url(${backgroundImage.src})`,
+            height: '100vh',
+            width: '100vw',
+            position: 'fixed',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            zIndex: '-1',
+          }}
+        />
         <Welcome setLoaded={setMeetTheTeam} />
         {meetTheTeam ? <MeetTheTeam teamMembers={teamMembers} /> : null}
-      </div>
+      {/* </div> */}
     </main>
   );
 }

@@ -22,6 +22,9 @@ export default function MeetTheTeam(props: MeetTheTeamProps) {
       spacing={0}
       justifyContent={'center'}
       alignItems={'center'}
+      style={{
+        position: 'relative',
+      }}
     >
       <Grid
         container
