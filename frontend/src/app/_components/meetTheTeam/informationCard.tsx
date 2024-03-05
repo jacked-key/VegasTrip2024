@@ -24,7 +24,7 @@ export default function InformationCard(props: InformationCardProps) {
       <CardHeader title="Fun Fact:" subheader={props.fun_fact} />
       <CardHeader
         title="What are you most excited to do in Vegas:"
-        subheader={props.fun_fact}
+        subheader={props.most_excited}
       />
       <CardHeader
         title="Will you throw up on this trip?:"

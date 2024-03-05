@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Vegas Valozoo',
+  title: 'Vegas <3',
   description: 'Rattie',
 };
 
