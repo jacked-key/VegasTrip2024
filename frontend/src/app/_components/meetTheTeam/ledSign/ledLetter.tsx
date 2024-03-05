@@ -23,11 +23,10 @@ const flicker = keyframes`
 const turn_on_animation = keyframes`
   19.999%, 22%, 62.999%, 64%, 64.999%, 70%, to {
     opacity: .99;
-    text-shadow: 0 0 8px #fff, 0 0 16px var(--neon-text-shadow), 0 0 24px var(--neon-text-shadow), 0 0 32px var(--neon-text-shadow), 0 0 40px var(--neon-text-edge-color), 0 0 48px var(--neon-text-edge-color), 0 0 56px var(--neon-text-edge-color), 0 0 64px var(--neon-text-edge-color), -3px -3px 16px var(--neon-text-shadow), 3px 3px 16px var(--neon-text-shadow);
+    text-shadow: 0 0 2px #fff, 0 0 4px var(--neon-text-shadow);
   }
   0%, 21.999%, 63%, 63.999%, 65%, 69.999% {
     opacity: 0.4;
-    text-shadow: 0 0 4px var(--neon-text-shadow), 0 0 8px var(--neon-text-shadow), 0 0 16px var(--neon-text-edge-color);
   }
 `
 
